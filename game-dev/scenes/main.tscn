@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bh73k52lhh386"]
+
+[ext_resource type="PackedScene" uid="uid://dehp5fgnlimho" path="res://scenes/cube.tscn" id="1_o5qli"]
+
+[node name="Main" type="Node3D" unique_id=500164404]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1499201655]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 5)
+current = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1836937118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+
+[node name="Label3D" type="Label3D" parent="." unique_id=74036654]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+text = "Hello world"
+font_size = 64
+uppercase = true
+
+[node name="cube" parent="." unique_id=1076119529 instance=ExtResource("1_o5qli")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)

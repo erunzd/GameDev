@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dehp5fgnlimho"]
+
+[ext_resource type="Script" uid="uid://c2f6av7dmx431" path="res://scenes/mesh_instance_3d.gd" id="1_7ufek"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_5rbgv"]
+
+[node name="cube" type="Node3D" unique_id=1076119529]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=267830652]
+mesh = SubResource("BoxMesh_5rbgv")
+script = ExtResource("1_7ufek")
