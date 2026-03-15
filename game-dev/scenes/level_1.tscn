@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://boogu3nfiuwwl"]
+
+[ext_resource type="PackedScene" uid="uid://cxabcolidkvvh" path="res://scenes/player.tscn" id="1_014kd"]
+[ext_resource type="PackedScene" uid="uid://dgfbmmlwfjhmf" path="res://scenes/trap.tscn" id="2_bswci"]
+[ext_resource type="Script" uid="uid://0skm0qsl6cms" path="res://scripts/player.gd" id="2_rus8k"]
+[ext_resource type="Script" uid="uid://dds0nfjvkawka" path="res://scripts/finish.gd" id="4_5xbjy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gkh53"]
+size = Vector3(10, 1, 50)
+
+[sub_resource type="BoxMesh" id="BoxMesh_014kd"]
+size = Vector3(10, 1, 50)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5xbjy"]
+size = Vector3(9.946453, 2.0463867, 8.609955)
+
+[node name="Level1" type="Node3D" unique_id=1944972761]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=639107449]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=794491953]
+shape = SubResource("BoxShape3D_gkh53")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1805438235]
+mesh = SubResource("BoxMesh_014kd")
+
+[node name="Player" parent="." unique_id=1103837444 instance=ExtResource("1_014kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07051015, 1.9923885, 24.020798)
+script = ExtResource("2_rus8k")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1015786645]
+transform = Transform3D(1, 0, 0, 0, 0.7777278, 0.62860125, 0, -0.62860125, 0.7777278, 0, 8.960205, 0)
+
+[node name="Trap" parent="." unique_id=1919335006 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.9777746, 0.5688319, 15.154158)
+
+[node name="Trap2" parent="." unique_id=1837719462 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 3.3637404, 1.1562905, 9.996083)
+
+[node name="Trap3" parent="." unique_id=1314779183 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.043147564, 0.5962653, 2.4883108)
+
+[node name="Trap4" parent="." unique_id=794347456 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -2.8351207, 0.62263227, -5.5541296)
+
+[node name="Trap5" parent="." unique_id=113335473 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1.9099793, 1.4529147, -10.904463)
+
+[node name="Trap6" parent="." unique_id=2132896401 instance=ExtResource("2_bswci")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -0.8534889, 0.7193303, -17.162342)
+
+[node name="Finish" type="Area3D" parent="." unique_id=717025363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -24.100218)
+script = ExtResource("4_5xbjy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Finish" unique_id=2048674638]
+transform = Transform3D(1, 0, 0, 0, -0.00078539446, -0.9999997, 0, 0.9999997, -0.00078539446, -0.009580612, 4.5686755, 0.17683601)
+shape = SubResource("BoxShape3D_5xbjy")
+
+[connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

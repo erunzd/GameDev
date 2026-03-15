@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://dgfbmmlwfjhmf"]
+
+[ext_resource type="Script" uid="uid://dyc3rfamh5tp5" path="res://scripts/trap.gd" id="1_npg1n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_npg1n"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_62q8x"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_npg1n"]
+albedo_color = Color(0.8509804, 0.22745098, 0.13333334, 1)
+
+[node name="Trap" type="Area3D" unique_id=1919335006]
+script = ExtResource("1_npg1n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1494641983]
+shape = SubResource("BoxShape3D_npg1n")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1109933336]
+mesh = SubResource("BoxMesh_62q8x")
+surface_material_override/0 = SubResource("StandardMaterial3D_npg1n")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
