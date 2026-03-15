@@ -15,5 +15,11 @@ This activity focuses on implementing core gameplay mechanics in a 3D environmen
 
 Physics-based movement was implemented including gravity, jumping, collision detection, and interaction with static obstacles. A dash/dodge mechanic was added using the Q key, allowing the player to burst forward in the current movement direction. A smooth follow camera system was implemented to track the player, and a respawn system was added to reset the player to a spawn point if they fall off the map.
 
-##Screenshot
+## Screenshot
 <img width="60%" alt="Screenshot 2026-02-20 at 4 18 30 PM" src="https://github.com/user-attachments/assets/b055e00f-8edc-44ee-816e-94f56f5feb0d" />
+
+# Week 2 – Activity 2: Level Design
+
+In this activity, we focused on basic level design by creating two playable levels for a simple 3D endless runner. Level 1 was designed to be easier, featuring a wider path and fewer traps to help the player understand the mechanics. Level 2 increased the difficulty by adding more traps and tighter spacing, requiring better timing and movement. Traps were implemented using collision detection that restarts the level when the player is caught, and a notification appears when the player enters Level 2 to indicate the progression.
+
+## Screenshot
