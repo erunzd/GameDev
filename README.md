@@ -25,3 +25,19 @@ In this activity, we focused on basic level design by creating two playable leve
 ## Screenshot
 <img width="60%" alt="Screenshot 2026-03-15 160407" src="https://github.com/user-attachments/assets/fea75669-56b6-4ff6-8430-ecf5e6973867" />
 <img width="60%" alt="Screenshot 2026-03-15 161214" src="https://github.com/user-attachments/assets/6ed07175-6a85-4e1e-bb87-c7b059b68618" />
+
+# Week 3 – Activity 1: UI/UX & Audio
+
+In this activity, we enhanced the game by integrating user interface elements and audio feedback. A simple HUD was implemented using CanvasLayer to display level information and failure messages, improving player feedback and clarity. Sound effects such as jump and fail sounds were added using audio players, along with optional background music to create a more immersive experience. These additions helped make the gameplay feel more responsive and engaging.
+
+## Screenshot
+<img width="60%" alt="Screenshot 2026-03-20 211254" src="https://github.com/user-attachments/assets/f0110d81-d928-48fb-bbf7-fcb2db36a8f5" />
+
+# Week 3 – Activity 2: AI & Enemies
+
+In this activity, we introduced basic enemy AI to the game. An enemy character was created with simple behaviors including patrolling within a set range, detecting the player using an Area3D, and chasing the player when within range. A separate detection and collision system was used to trigger interactions, allowing the enemy to restart the level upon contact with the player. This demonstrates the use of basic AI patterns and interaction mechanics beyond static obstacles.
+
+## Screenshot
+<img width="60%" alt="Screenshot 2026-03-20 211334" src="https://github.com/user-attachments/assets/982616a7-9015-4df9-b960-32b4537db3c2" />
+<img width="60%" alt="Screenshot 2026-03-20 211408" src="https://github.com/user-attachments/assets/8ff4bd6f-fe6d-4733-8337-a6233069cbcb" />
+
