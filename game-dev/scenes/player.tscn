@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cxabcolidkvvh"]
 
+[ext_resource type="AudioStream" uid="uid://droo0v3yn13i2" path="res://sounds/jump.mp3" id="1_3vyb7"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_u8vuu"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_3vyb7"]
@@ -14,3 +16,6 @@ mesh = SubResource("CapsuleMesh_3vyb7")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1071151556]
 transform = Transform3D(1, 0, 0, 0, 0.9603132, 0.2789241, 0, -0.2789241, 0.9603132, 0, 3, 6)
+
+[node name="JumpSound" type="AudioStreamPlayer3D" parent="." unique_id=1769358199]
+stream = ExtResource("1_3vyb7")

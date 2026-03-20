@@ -57,4 +57,23 @@ script = ExtResource("4_5xbjy")
 transform = Transform3D(1, 0, 0, 0, -0.00078539446, -0.9999997, 0, 0.9999997, -0.00078539446, -0.009580612, 4.5686755, 0.17683601)
 shape = SubResource("BoxShape3D_5xbjy")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1451886733]
+
+[node name="HUD_Label" type="Label" parent="CanvasLayer" unique_id=1968458490]
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 67.0
+offset_bottom = 33.0
+text = "Level 1"
+
+[node name="FailLabel" type="Label" parent="CanvasLayer" unique_id=283974168]
+visible = false
+offset_left = 446.00003
+offset_top = 279.0
+offset_right = 538.0
+offset_bottom = 302.0
+scale = Vector2(3, 3)
+text = "YOU FAILED"
+uppercase = true
+
 [connection signal="body_entered" from="Finish" to="Finish" method="_on_body_entered"]

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://btldx3ml03311"]
+
+[ext_resource type="Script" uid="uid://b5efrge6wb1yn" path="res://scripts/enemy.gd" id="1_7p1mj"]
+[ext_resource type="AudioStream" uid="uid://coe51f0mwjubu" path="res://sounds/fail.mp3" id="2_md0e3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_8tegq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7p1mj"]
+albedo_color = Color(0.14920747, 0.117708765, 0.47532243, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_md0e3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7p1mj"]
+radius = 3.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_md0e3"]
+radius = 0.6220032
+
+[node name="enemy" type="CharacterBody3D" unique_id=915949952]
+script = ExtResource("1_7p1mj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=44735033]
+shape = SubResource("SphereShape3D_8tegq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1604430747]
+material_override = SubResource("StandardMaterial3D_7p1mj")
+mesh = SubResource("SphereMesh_md0e3")
+
+[node name="DetectionArea" type="Area3D" parent="." unique_id=442757968]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea" unique_id=762471657]
+shape = SubResource("SphereShape3D_7p1mj")
+
+[node name="KillArea" type="Area3D" parent="." unique_id=791136712]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="KillArea" unique_id=1006499480]
+shape = SubResource("SphereShape3D_md0e3")
+
+[node name="FailSound" type="AudioStreamPlayer3D" parent="." unique_id=2057182705]
+stream = ExtResource("2_md0e3")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="KillArea" to="." method="_on_kill_area_body_entered"]

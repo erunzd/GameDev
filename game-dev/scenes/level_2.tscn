@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://0skm0qsl6cms" path="res://scripts/player.gd" id="2_eqxsl"]
 [ext_resource type="PackedScene" uid="uid://dgfbmmlwfjhmf" path="res://scenes/trap.tscn" id="3_b4j7a"]
 [ext_resource type="Script" uid="uid://biirykxqsa2rx" path="res://scenes/level2-text.gd" id="4_eqxsl"]
+[ext_resource type="PackedScene" uid="uid://btldx3ml03311" path="res://scenes/enemy.tscn" id="5_wo48x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gkh53"]
 size = Vector3(10, 1, 50)
@@ -34,10 +35,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7777278, 0.62860125, 0, -0.62860125, 0.777
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -3.5174656, 1.3299184, 17.775862)
 
 [node name="Trap2" parent="." unique_id=1837719462 instance=ExtResource("3_b4j7a")]
-transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 2.9710722, 2.0183115, 13.369868)
-
-[node name="Trap3" parent="." unique_id=1314779183 instance=ExtResource("3_b4j7a")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.12594938, 1.5159659, 6.2155523)
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 3.3982677, 2.0183115, 8.2558365)
 
 [node name="Trap4" parent="." unique_id=794347456 instance=ExtResource("3_b4j7a")]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, -2.8351207, 1.7961028, 0.5651741)
@@ -67,3 +65,25 @@ text = "Welcome to Level 2!"
 font_size = 100
 outline_size = 10
 script = ExtResource("4_eqxsl")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1892338419]
+
+[node name="HUD_Label" type="Label" parent="CanvasLayer" unique_id=556685369]
+offset_left = 13.0
+offset_top = 10.0
+offset_right = 67.0
+offset_bottom = 33.0
+text = "Level 2"
+
+[node name="FailLabel" type="Label" parent="CanvasLayer" unique_id=1617468045]
+visible = false
+offset_left = 446.00003
+offset_top = 279.0
+offset_right = 538.0
+offset_bottom = 302.0
+scale = Vector2(3, 3)
+text = "YOU FAILED"
+uppercase = true
+
+[node name="enemy" parent="." unique_id=915949952 instance=ExtResource("5_wo48x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.16391921, 1.3881435, 12.924013)

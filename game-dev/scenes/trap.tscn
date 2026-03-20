@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dgfbmmlwfjhmf"]
 
 [ext_resource type="Script" uid="uid://dyc3rfamh5tp5" path="res://scripts/trap.gd" id="1_npg1n"]
+[ext_resource type="AudioStream" uid="uid://coe51f0mwjubu" path="res://sounds/fail.mp3" id="2_62q8x"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_npg1n"]
 
@@ -18,5 +19,8 @@ shape = SubResource("BoxShape3D_npg1n")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1109933336]
 mesh = SubResource("BoxMesh_62q8x")
 surface_material_override/0 = SubResource("StandardMaterial3D_npg1n")
+
+[node name="FailSound" type="AudioStreamPlayer3D" parent="." unique_id=1831591294]
+stream = ExtResource("2_62q8x")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
