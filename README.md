@@ -23,3 +23,5 @@ Physics-based movement was implemented including gravity, jumping, collision det
 In this activity, we focused on basic level design by creating two playable levels for a simple 3D endless runner. Level 1 was designed to be easier, featuring a wider path and fewer traps to help the player understand the mechanics. Level 2 increased the difficulty by adding more traps and tighter spacing, requiring better timing and movement. Traps were implemented using collision detection that restarts the level when the player is caught, and a notification appears when the player enters Level 2 to indicate the progression.
 
 ## Screenshot
+<img width="60%" alt="Screenshot 2026-03-15 160407" src="https://github.com/user-attachments/assets/fea75669-56b6-4ff6-8430-ecf5e6973867" />
+<img width="60%" alt="Screenshot 2026-03-15 161214" src="https://github.com/user-attachments/assets/6ed07175-6a85-4e1e-bb87-c7b059b68618" />
