@@ -19,3 +19,6 @@ transform = Transform3D(1, 0, 0, 0, 0.9603132, 0.2789241, 0, -0.2789241, 0.96031
 
 [node name="JumpSound" type="AudioStreamPlayer3D" parent="." unique_id=1769358199]
 stream = ExtResource("1_3vyb7")
+
+[node name="NameLabel" type="Label3D" parent="." unique_id=1898982514]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7371826, 0)

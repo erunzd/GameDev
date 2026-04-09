@@ -24,9 +24,16 @@ shape = SubResource("BoxShape3D_gkh53")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=1805438235]
 mesh = SubResource("BoxMesh_014kd")
 
-[node name="Player" parent="." unique_id=1103837444 instance=ExtResource("1_014kd")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07051015, 1.9923885, 24.020798)
+[node name="Player1" parent="." unique_id=1103837444 instance=ExtResource("1_014kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.8671324, 1.9923885, 24.020798)
 script = ExtResource("2_rus8k")
+player_color = Color(0.23137255, 1, 1, 1)
+
+[node name="Player2" parent="." unique_id=1885427564 instance=ExtResource("1_014kd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.0426788, 1.9923885, 24.020798)
+script = ExtResource("2_rus8k")
+player_id = 2
+player_color = Color(1, 0.5058824, 1, 1)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1015786645]
 transform = Transform3D(1, 0, 0, 0, 0.7777278, 0.62860125, 0, -0.62860125, 0.7777278, 0, 8.960205, 0)

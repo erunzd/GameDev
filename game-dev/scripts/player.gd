@@ -1,37 +1,45 @@
 extends CharacterBody3D
 
-var forward_speed = 8
-var move_speed = 6
-var jump_velocity = 7
+@export var player_id = 1
+@export var player_color : Color = Color(1,1,1)
+
+var speed = 6
+var jump_velocity = 5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 func _physics_process(delta):
 
-	# Auto forward movement
-	velocity.z = -forward_speed
+	velocity.z = -8  # auto forward
 
-	# Left / Right controls
-	var input_x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
-	velocity.x = input_x * move_speed
+	var input_x = 0.0
 
-	# Jump
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = jump_velocity
-		$JumpSound.play()
+	if player_id == 1:
+		input_x = Input.get_action_strength("p1_right") - Input.get_action_strength("p1_left")
 
-	# Gravity
+		if Input.is_action_just_pressed("p1_jump") and is_on_floor():
+			velocity.y = jump_velocity
+
+	elif player_id == 2:
+		input_x = Input.get_action_strength("p2_right") - Input.get_action_strength("p2_left")
+
+		if Input.is_action_just_pressed("p2_jump") and is_on_floor():
+			velocity.y = jump_velocity
+
+	velocity.x = input_x * speed
+
 	if not is_on_floor():
-		if velocity.y > 0:
-			velocity.y -= gravity * delta
-		else:
-			velocity.y -= gravity * 2 * delta
+		velocity.y -= gravity * delta
 
 	move_and_slide()
 
-	# Restart if player falls
 	if position.y < -10:
 		get_tree().reload_current_scene()
 
-
-func _on_detection_area_body_entered(body: Node3D) -> void:
-	pass # Replace with function body.
+func _ready():
+	if player_id == 1:
+		$NameLabel.text = "P1"
+	else:
+		$NameLabel.text = "P2"
+	var mat = StandardMaterial3D.new()
+	mat.albedo_color = player_color
+	$MeshInstance3D.material_override = mat
