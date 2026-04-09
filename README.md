@@ -50,4 +50,5 @@ In this activity, we implemented a simple local multiplayer system that allows t
 ## Screenshot
 <img width="60%" alt="Screenshot 2026-04-09 184937" src="https://github.com/user-attachments/assets/9597a86f-7e10-4071-a763-36d23e995e6a" />
 <img width="60%" alt="image" src="https://github.com/user-attachments/assets/02a2dde0-8310-4e71-8be3-6c3a7a069d55" />
+<img width="60%" alt="image" src="https://github.com/user-attachments/assets/138e6b6d-2728-4383-8e26-84324491383b" />
 
