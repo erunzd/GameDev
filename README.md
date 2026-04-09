@@ -41,3 +41,13 @@ In this activity, we introduced basic enemy AI to the game. An enemy character w
 <img width="60%" alt="Screenshot 2026-03-20 211334" src="https://github.com/user-attachments/assets/982616a7-9015-4df9-b960-32b4537db3c2" />
 <img width="60%" alt="Screenshot 2026-03-20 211408" src="https://github.com/user-attachments/assets/8ff4bd6f-fe6d-4733-8337-a6233069cbcb" />
 
+# Week 4 – Activity 1: 3D Basics & Optimization
+In this activity, we focused on improving the structure and performance of the 3D game. Basic optimization techniques were applied, such as organizing scenes properly, reusing assets through instancing, and adjusting collision shapes and physics settings for better efficiency. These changes helped make the game run more smoothly while maintaining a clean and manageable project structure.
+
+# Week 4 – Activity 2: Multiplayer
+In this activity, we implemented a simple local multiplayer system that allows two players to play on the same device using different controls. Each player was assigned unique input mappings and visual identifiers, such as different colors and labels, to distinguish them during gameplay. Both players can move, jump, and interact with the environment, including traps and enemies, demonstrating basic multiplayer interaction within a shared game space.
+
+## Screenshot
+<img width="60%" alt="Screenshot 2026-04-09 184937" src="https://github.com/user-attachments/assets/9597a86f-7e10-4071-a763-36d23e995e6a" />
+<img width="60%" alt="image" src="https://github.com/user-attachments/assets/02a2dde0-8310-4e71-8be3-6c3a7a069d55" />
+
